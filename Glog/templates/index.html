@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang=zh-Hant>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Germ Blog</title>
-</head>
-<body>
-    <h1>Germ Blog</h1>
-    {% for post in posts %}
-        <p><a href="post/{{post.slug}}"> {{post.title}} </a></p>
-    {% endfor %}
-    <hr>
-    <h3>現在時刻:{{ now }}</h3>
-</body>
-</html>
+{% extends "base.html" %} {% block title %} Germ Blog{% endblock %} {% block
+headmessage %}
+<h3>部落格內容：</h3>
+{% block content %} {% for post in posts %}
+<p class="">
+  <a href="post/{{post.slug}}">{{post.title}}</a>
+</p>
+{% endfor %} {% endblock %}

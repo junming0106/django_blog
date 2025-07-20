@@ -1,0 +1,9 @@
+<!-- footer.html -->
+{% block footer %}
+    {% if now %}
+        <p class="text-center m-0">現在時間：{{ now }}</p>
+    {% else %}
+        <p>本文取自網路</p>
+    {% endif %}
+
+{% endblock  %}
